@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+.App{
+    padding: 0px;
+    margin: 0px;
+    background-image: linear-gradient(#f39bce, rgb(103, 58, 129));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card
+{
+    background-color: white;
+    height:80vh;
+    width:90%;
+    display: flex;
+    flex-direction: row;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.appointment{
+    width:50%;
+    height:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.appointimg{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
 }
 
-.App-link {
-  color: #61dafb;
+.appointimg div{
+    height: 80%;
+    width: 90%;
+    background-image: url("../public/images/appointImg.jpg");
+    background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

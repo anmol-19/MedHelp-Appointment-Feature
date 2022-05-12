@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import NewCard from "./Components/NewCard";
+import AppointmentForm from "./Components/AppointmentForm";
+
+// const AppointData=[]
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const[olddata,SetnewData]=useState([]);
+  const addData=(AppointData)=>{
+    // console.log('data' , AppointData);
+    // const newArray = olddata;
+    // newArray.push(AppointData);
+    // console.log(newArray);
+    SetnewData([...olddata,AppointData]);
+    // SetnewData((prevData)=>{
+    //   return([AppointData,...prevData]);
+    // })
+  }
+
+
+  return <>
+      <div className="App">
+        <div className="card">
+          <div className="appointment">
+            <AppointmentForm addData={addData} />
+           { olddata.map((data)  => {return (<NewCard items={data}/>) })}
+          </div>
+          <div className="appointimg">
+          <div className="imgholder"></div>
+          </div>
+        </div>
+      </div>
+    </>
 }
+
 
 export default App;

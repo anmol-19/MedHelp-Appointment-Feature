@@ -1,0 +1,14 @@
+.Card{
+    height:20%;
+    width:30%;
+    border:1px solid rgba(0, 0, 0, 0.479);
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card div{
+    padding:2px;
+    font-size: large;
+    font-weight: bolder;
+}
