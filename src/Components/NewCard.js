@@ -11,6 +11,7 @@ const NewCard=(props)=>{
    <div className="Card">
        <div>{props.items.Name}</div>
        <div>{String(props.items.date)}</div>
+       <div>{props.items.time}</div>
    </div>
    </>
    );

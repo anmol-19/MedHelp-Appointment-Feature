@@ -6,7 +6,6 @@ import AppointmentForm from "./Components/AppointmentForm";
 // const AppointData=[]
 
 function App() {
-
   const[olddata,SetnewData]=useState([]);
   const addData=(AppointData)=>{
     // console.log('data' , AppointData);
@@ -14,6 +13,7 @@ function App() {
     // newArray.push(AppointData);
     // console.log(newArray);
     SetnewData([...olddata,AppointData]);
+    // console.log(olddata)
     // SetnewData((prevData)=>{
     //   return([AppointData,...prevData]);
     // })
